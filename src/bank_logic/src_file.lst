@@ -1,0 +1,7 @@
+../src/bank_logic/bank_load_logic.v
+../src/bank_logic/bg_input_logic.v
+../src/bank_logic/bg_output_logic.v
+../src/bank_logic/bg4_input_logic.v
+../src/bank_logic/bg4_output_logic.v
+../src/bank_logic/bg5_input_logic.v
+../src/bank_logic/bg5_output_logic.v

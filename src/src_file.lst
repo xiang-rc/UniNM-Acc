@@ -1,0 +1,8 @@
+-f ../src/bank/src_file.lst
+-f ../src/bank_logic/src_file.lst
+-f ../src/configurable_bf/src_file.lst
+-f ../src/mm/src_file.lst
+-f ../src/msm_ctrl/src_file.lst
+-f ../src/ntt_intt_2D_array/src_file.lst
+-f ../src/shuffle_top_poly_mul_for_2D_array/src_file.lst
+-f ../src/tf_gen_for_2D_array/src_file.lst

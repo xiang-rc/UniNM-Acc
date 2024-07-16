@@ -1,0 +1,6 @@
+../src/msm_ctrl/bucket_ctrl.v
+../src/msm_ctrl/msm_ctrl.v
+../src/msm_ctrl/msm_datapath.v
+../src/msm_ctrl/msm_top.v
+../src/msm_ctrl/point_mem_ctrl.v
+../src/msm_ctrl/result_buffer_ctrl.v

@@ -1,0 +1,4 @@
+../src/configurable_bf/bf_256.v
+../src/configurable_bf/bf_384_add_mul.v
+../src/configurable_bf/bf_384_add_sub_mul.v
+../src/configurable_bf/bf_array.v
