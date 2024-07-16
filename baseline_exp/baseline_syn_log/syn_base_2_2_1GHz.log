@@ -1,0 +1,1382 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version P-2019.03 for linux64 - Feb 27, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+source ./common_setup.tcl -verbose
+.
+. /tools/eda/synopsys/synthesis/P-2019.03/libraries/syn                             /tools/eda/synopsys/synthesis/P-2019.03/minpower/syn                              ~/work/S018DP_X136Y8D8_PR                            ~/work/SCC018UG_UHD_RVT/liberty/1.8v                            ~/work/SCC018UG_UHD_RVT/symbol       
+. /tools/eda/synopsys/synthesis/P-2019.03/libraries/syn                            /tools/eda/synopsys/synthesis/P-2019.03/syn_ver                            /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a                            /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b                            /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a                            /login_home/taoqichao/Desktop/MM_ASIC/src/                            /login_home/taoqichao/Desktop/MM_ASIC/src/top_poly_mul/ 
+tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db                                tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db                             tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db 
+tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs                          tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs                          tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs
+/tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/dw_foundation.sldb
+tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db                                tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db                             tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db  /tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/dw_foundation.sldb
+Warning: You requested 16 cores. However, load on host venus is 39.92. Tool will ignore the request and use 1 cores. (UIO-231)
+1
+true
+true
+comprehensive
+default_all
+*******************************************************************
+*********************end of load .common_dc.setup******************
+*******************************************************************
+source ./dont_use.tcl -verbose
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db'
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db'
+Loading db file '/tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/dw_foundation.sldb'
+set DESIGN_NAME naive_mm_wrapper
+naive_mm_wrapper
+remove_design -all
+Removing library 'tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs'
+Removing library 'tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs'
+Removing library 'tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs'
+Removing library 'dw_foundation.sldb'
+1
+set_svf $DESIGN_NAME.svf
+1
+analyze -vcs "-verilog -f ./src_file.lst"
+Running PRESTO HDLC
+Compiling source file ../src/naive_mm/naive_mm.v
+Compiling source file ../src/naive_mm/naive_mm_wrapper.v
+Presto compilation completed successfully.
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db'
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db'
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db'
+Loading db file '/tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/dw_foundation.sldb'
+1
+elaborate $DESIGN_NAME
+Loading db file '/tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/gtech.db'
+Loading db file '/tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/standard.sldb'
+  Loading link library 'tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs'
+  Loading link library 'tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs'
+  Loading link library 'tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+	in routine naive_mm_wrapper line 15 in file
+		'../src/naive_mm/naive_mm_wrapper.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      a_reg_reg      | Flip-flop |  256  |  Y  | Y  | N  | N  | N  | N  | N  |
+|      b_reg_reg      | Flip-flop |  256  |  Y  | Y  | N  | N  | N  | N  | N  |
+|        p_reg        | Flip-flop |  256  |  Y  | Y  | N  | N  | N  | N  | N  |
+|     rst_n_r_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (naive_mm_wrapper)
+Elaborated 1 design.
+Current design is now 'naive_mm_wrapper'.
+Information: Building the design 'naive_mm'. (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+Synthetic Cells Summary
+===================================
+|        Cell Type        | Count |
+===================================
+| MULT_UNS_OP;256;32;288  |   8   |
+| SUB_UNS_OP;256;255;256  |   1   |
+| SELECT_OP_2.256_2.256_2 |   1   |
+===================================
+Presto compilation completed successfully. (naive_mm)
+Information: Building the design 'naive_xm'. (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+	in routine naive_xm line 60 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     result_reg      | Flip-flop |  256  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Synthetic Cells Summary
+==================================
+|       Cell Type        | Count |
+==================================
+| ADD_UNS_OP;256;288;288 |   1   |
+|  SUB_UNS_OP;32;32;32   |   1   |
+|   ADD_UNS_OP;32;1;32   |   1   |
+| MULT_UNS_OP;255;32;287 |   1   |
+| ADD_UNS_OP;287;288;288 |   1   |
+==================================
+Presto compilation completed successfully. (naive_xm)
+Information: Building the design 'pip' instantiated from design 'naive_mm' with
+	the parameters "data_width=288,stage=1". (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage1 line 94 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop |  288  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (pip_data_width288_stage1)
+Information: Building the design 'pip' instantiated from design 'naive_mm' with
+	the parameters "data_width=288,stage=2". (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage2 line 94 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop |  288  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage2 line 100 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop |  288  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (pip_data_width288_stage2)
+Information: Building the design 'pip' instantiated from design 'naive_mm' with
+	the parameters "data_width=288,stage=3". (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage3 line 94 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop |  288  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage3 line 100 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop |  576  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (pip_data_width288_stage3)
+Information: Building the design 'pip' instantiated from design 'naive_mm' with
+	the parameters "data_width=288,stage=4". (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage4 line 94 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop |  288  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage4 line 100 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop |  864  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (pip_data_width288_stage4)
+Information: Building the design 'pip' instantiated from design 'naive_mm' with
+	the parameters "data_width=288,stage=5". (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage5 line 94 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop |  288  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage5 line 100 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop | 1152  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (pip_data_width288_stage5)
+Information: Building the design 'pip' instantiated from design 'naive_mm' with
+	the parameters "data_width=288,stage=6". (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage6 line 94 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop |  288  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage6 line 100 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop | 1440  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (pip_data_width288_stage6)
+Information: Building the design 'pip' instantiated from design 'naive_mm' with
+	the parameters "data_width=288,stage=7". (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage7 line 94 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop |  288  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine pip_data_width288_stage7 line 100 in file
+		'../src/naive_mm/naive_mm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     din_pip_reg     | Flip-flop | 1728  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (pip_data_width288_stage7)
+1
+#-parameter DW=256
+current_design $DESIGN_NAME
+Current design is 'naive_mm_wrapper'.
+{naive_mm_wrapper}
+set_top_module $DESIGN_NAME
+Error: unknown command 'set_top_module' (CMD-005)
+if {[link] == 0} {
+    echo "link error!"
+    #exit
+}
+
+  Linking design 'naive_mm_wrapper'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs (library) /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db
+  tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs (library) /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db
+  tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs (library) /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db
+  dw_foundation.sldb (library) /tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/dw_foundation.sldb
+
+uniquify
+Information: Uniquified 8 instances of design 'naive_xm'. (OPT-1056)
+1
+if {[check_design] == 0} {
+    echo "check_design error!"
+    #exit
+}
+ 
+****************************************
+check_design summary:
+Version:     P-2019.03
+Date:        Fri Mar 29 10:10:44 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                             257
+    Connected to power or ground (LINT-32)                        256
+    Nets connected to multiple pins on same cell (LINT-33)          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[255]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[254]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[253]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[252]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[251]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[250]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[249]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[248]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[247]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[246]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[245]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[244]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[243]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[242]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[241]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[240]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[239]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[238]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[237]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[236]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[235]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[234]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[233]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[232]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[231]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[230]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[229]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[228]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[227]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[226]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[225]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[224]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[223]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[222]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[221]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[220]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[219]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[218]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[217]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[216]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[215]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[214]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[213]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[212]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[211]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[210]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[209]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[208]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[207]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[206]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[205]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[204]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[203]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[202]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[201]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[200]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[199]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[198]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[197]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[196]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[195]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[194]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[193]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[192]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[191]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[190]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[189]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[188]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[187]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[186]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[185]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[184]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[183]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[182]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[181]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[180]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[179]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[178]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[177]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[176]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[175]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[174]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[173]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[172]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[171]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[170]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[169]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[168]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[167]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[166]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[165]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[164]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[163]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[162]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[161]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[160]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[159]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[158]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[157]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[156]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[155]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[154]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[153]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[152]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[151]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[150]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[149]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[148]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[147]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[146]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[145]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[144]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[143]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[142]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[141]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[140]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[139]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[138]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[137]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[136]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[135]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[134]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[133]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[132]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[131]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[130]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[129]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[128]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[127]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[126]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[125]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[124]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[123]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[122]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[121]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[120]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[119]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[118]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[117]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[116]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[115]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[114]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[113]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[112]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[111]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[110]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[109]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[108]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[107]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[106]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[105]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[104]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[103]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[102]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[101]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[100]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[99]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[98]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[97]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[96]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[95]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[94]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[93]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[92]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[91]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[90]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[89]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[88]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[87]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[86]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[85]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[84]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[83]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[82]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[81]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[80]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[79]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[78]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[77]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[76]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[75]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[74]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[73]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[72]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[71]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[70]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[69]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[68]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[67]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[66]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[65]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[64]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[63]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[62]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[61]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[60]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[59]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[58]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[57]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[56]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[55]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[54]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[53]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[52]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[51]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[50]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[49]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[48]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[47]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[46]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[45]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[44]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[43]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[42]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[41]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[40]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[39]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[38]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[37]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[36]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[35]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[34]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[33]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[32]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[31]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[30]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[29]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[28]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[27]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[26]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[25]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[24]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[23]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[22]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[21]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[20]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[19]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[18]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[17]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[16]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[15]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[14]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[13]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[12]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[11]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[10]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[9]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[8]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[7]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[6]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[5]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[4]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[3]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[2]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[1]' is connected to logic 0. 
+Warning: In design 'naive_mm', a pin on submodule 'xm_U0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'op1[0]' is connected to logic 0. 
+Warning: In design 'naive_mm', the same net is connected to more than one pin on submodule 'xm_U0'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'op1[255]', 'op1[254]'', 'op1[253]', 'op1[252]', 'op1[251]', 'op1[250]', 'op1[249]', 'op1[248]', 'op1[247]', 'op1[246]', 'op1[245]', 'op1[244]', 'op1[243]', 'op1[242]', 'op1[241]', 'op1[240]', 'op1[239]', 'op1[238]', 'op1[237]', 'op1[236]', 'op1[235]', 'op1[234]', 'op1[233]', 'op1[232]', 'op1[231]', 'op1[230]', 'op1[229]', 'op1[228]', 'op1[227]', 'op1[226]', 'op1[225]', 'op1[224]', 'op1[223]', 'op1[222]', 'op1[221]', 'op1[220]', 'op1[219]', 'op1[218]', 'op1[217]', 'op1[216]', 'op1[215]', 'op1[214]', 'op1[213]', 'op1[212]', 'op1[211]', 'op1[210]', 'op1[209]', 'op1[208]', 'op1[207]', 'op1[206]', 'op1[205]', 'op1[204]', 'op1[203]', 'op1[202]', 'op1[201]', 'op1[200]', 'op1[199]', 'op1[198]', 'op1[197]', 'op1[196]', 'op1[195]', 'op1[194]', 'op1[193]', 'op1[192]', 'op1[191]', 'op1[190]', 'op1[189]', 'op1[188]', 'op1[187]', 'op1[186]', 'op1[185]', 'op1[184]', 'op1[183]', 'op1[182]', 'op1[181]', 'op1[180]', 'op1[179]', 'op1[178]', 'op1[177]', 'op1[176]', 'op1[175]', 'op1[174]', 'op1[173]', 'op1[172]', 'op1[171]', 'op1[170]', 'op1[169]', 'op1[168]', 'op1[167]', 'op1[166]', 'op1[165]', 'op1[164]', 'op1[163]', 'op1[162]', 'op1[161]', 'op1[160]', 'op1[159]', 'op1[158]', 'op1[157]', 'op1[156]', 'op1[155]', 'op1[154]', 'op1[153]', 'op1[152]', 'op1[151]', 'op1[150]', 'op1[149]', 'op1[148]', 'op1[147]', 'op1[146]', 'op1[145]', 'op1[144]', 'op1[143]', 'op1[142]', 'op1[141]', 'op1[140]', 'op1[139]', 'op1[138]', 'op1[137]', 'op1[136]', 'op1[135]', 'op1[134]', 'op1[133]', 'op1[132]', 'op1[131]', 'op1[130]', 'op1[129]', 'op1[128]', 'op1[127]', 'op1[126]', 'op1[125]', 'op1[124]', 'op1[123]', 'op1[122]', 'op1[121]', 'op1[120]', 'op1[119]', 'op1[118]', 'op1[117]', 'op1[116]', 'op1[115]', 'op1[114]', 'op1[113]', 'op1[112]', 'op1[111]', 'op1[110]', 'op1[109]', 'op1[108]', 'op1[107]', 'op1[106]', 'op1[105]', 'op1[104]', 'op1[103]', 'op1[102]', 'op1[101]', 'op1[100]', 'op1[99]', 'op1[98]', 'op1[97]', 'op1[96]', 'op1[95]', 'op1[94]', 'op1[93]', 'op1[92]', 'op1[91]', 'op1[90]', 'op1[89]', 'op1[88]', 'op1[87]', 'op1[86]', 'op1[85]', 'op1[84]', 'op1[83]', 'op1[82]', 'op1[81]', 'op1[80]', 'op1[79]', 'op1[78]', 'op1[77]', 'op1[76]', 'op1[75]', 'op1[74]', 'op1[73]', 'op1[72]', 'op1[71]', 'op1[70]', 'op1[69]', 'op1[68]', 'op1[67]', 'op1[66]', 'op1[65]', 'op1[64]', 'op1[63]', 'op1[62]', 'op1[61]', 'op1[60]', 'op1[59]', 'op1[58]', 'op1[57]', 'op1[56]', 'op1[55]', 'op1[54]', 'op1[53]', 'op1[52]', 'op1[51]', 'op1[50]', 'op1[49]', 'op1[48]', 'op1[47]', 'op1[46]', 'op1[45]', 'op1[44]', 'op1[43]', 'op1[42]', 'op1[41]', 'op1[40]', 'op1[39]', 'op1[38]', 'op1[37]', 'op1[36]', 'op1[35]', 'op1[34]', 'op1[33]', 'op1[32]', 'op1[31]', 'op1[30]', 'op1[29]', 'op1[28]', 'op1[27]', 'op1[26]', 'op1[25]', 'op1[24]', 'op1[23]', 'op1[22]', 'op1[21]', 'op1[20]', 'op1[19]', 'op1[18]', 'op1[17]', 'op1[16]', 'op1[15]', 'op1[14]', 'op1[13]', 'op1[12]', 'op1[11]', 'op1[10]', 'op1[9]', 'op1[8]', 'op1[7]', 'op1[6]', 'op1[5]', 'op1[4]', 'op1[3]', 'op1[2]', 'op1[1]', 'op1[0]'.
+write_file -format ddc -hierarchy -output unmapped/$DESIGN_NAME.ddc
+Writing ddc file 'unmapped/naive_mm_wrapper.ddc'.
+1
+create_clock -name CLK -period 1.0 -waveform {0.00 0.50} [get_ports clk]
+1
+set_ideal_network -no_propagate [get_ports clk]
+1
+set_ideal_network -no_propagate [get_ports rst_n]
+1
+compile_ultra -no_autoungroup
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | P-2019.03-DWBB_201903.0 |     *     |
+| Licensed DW Building Blocks        | P-2019.03-DWBB_201903.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 257 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'naive_mm_wrapper'
+
+Loaded alib file './alib-52/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db.alib' (placeholder)
+Loaded alib file './alib-52/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db.alib'
+Loaded alib file './alib-52/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db.alib' (placeholder)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'pip_data_width288_stage7'
+  Processing 'pip_data_width288_stage6'
+  Processing 'naive_mm'
+ Implement Synthetic for 'naive_mm'.
+  Processing 'pip_data_width288_stage5'
+  Processing 'pip_data_width288_stage4'
+  Processing 'naive_mm_wrapper'
+  Processing 'pip_data_width288_stage3'
+  Processing 'naive_xm_7'
+ Implement Synthetic for 'naive_xm_7'.
+  Processing 'pip_data_width288_stage1'
+  Processing 'pip_data_width288_stage2'
+  Processing 'naive_xm_0'
+ Implement Synthetic for 'naive_xm_0'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELBWP12T30P140' in the library 'tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHBWP12T30P140' in the library 'tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIELBWP12T30P140HVT' in the library 'tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHBWP12T30P140HVT' in the library 'tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIELBWP12T30P140LVT' in the library 'tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHBWP12T30P140LVT' in the library 'tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+Information: Added key list 'DesignWare' to design 'naive_xm_7'. (DDB-72)
+  Mapping Optimization (Phase 2)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:28:13  281038.3      1.08    1674.2       0.2                           2395740.0000
+  Mapping 'naive_mm_DW_mult_uns_14'
+  Mapping 'naive_xm_7_DP_OP_10J8_122_5600_7'
+Information: Added key list 'DesignWare' to design 'naive_mm'. (DDB-72)
+  Mapping 'naive_mm_DW01_add_24'
+    0:28:45  281099.3      1.09    1678.9       0.2                           2396876.0000
+    0:28:45  281093.2      1.03    1667.5       0.2                           2396838.7500
+  Mapping 'naive_mm_DW01_add_25'
+    0:28:45  281099.3      1.11    1678.7       0.2                           2396876.0000
+    0:28:45  281090.4      1.05    1670.0       0.2                           2396779.0000
+  Mapping 'naive_mm_DW01_add_26'
+    0:28:46  281099.3      1.09    1667.4       0.2                           2396876.0000
+    0:28:46  281092.6      1.03    1665.1       0.2                           2396827.5000
+  Mapping 'naive_mm_DW01_add_27'
+    0:28:46  281099.3      1.10    1667.0       0.2                           2396876.0000
+    0:28:46  281090.4      1.04    1665.4       0.2                           2396779.0000
+  Mapping 'naive_mm_DW01_add_28'
+    0:28:47  281096.8      1.09    1666.3       0.2                           2396856.5000
+    0:28:47  281088.2      1.03    1665.1       0.2                           2396764.5000
+  Mapping 'naive_mm_DW01_add_29'
+    0:28:47  281121.6      1.10    1680.9       0.2                           2397142.5000
+    0:28:49  281105.2      1.04    1668.9       0.2                           2396987.7500
+  Mapping 'naive_mm_DW01_add_30'
+    0:28:50  281118.3      1.09    1676.4       0.2                           2397113.0000
+    0:28:50  281107.7      1.02    1664.8       0.2                           2396974.7500
+  Mapping 'naive_mm_DW01_add_31'
+    0:28:50  281096.8      1.10    1667.6       0.2                           2396856.5000
+    0:28:50  281092.4      1.02    1664.9       0.2                           2396862.7500
+  Mapping 'naive_mm_DW01_add_32'
+    0:28:51  281140.6      1.07    1672.9       0.2                           2397379.5000
+    0:28:51  281127.5      1.02    1664.8       0.2                           2397253.7500
+  Mapping 'naive_mm_DW01_add_33'
+    0:28:51  281138.3      1.08    1674.6       0.2                           2397362.2500
+    0:28:52  281118.9      1.02    1664.8       0.2                           2397167.0000
+  Mapping 'naive_mm_DW01_add_34'
+    0:28:52  281121.6      1.06    1665.6       0.2                           2397142.5000
+    0:28:52  281111.9      1.02    1664.8       0.2                           2397030.0000
+  Mapping 'naive_mm_DW01_add_35'
+    0:28:52  281116.1      1.09    1666.3       0.2                           2397097.2500
+    0:28:52  281097.8      1.03    1665.0       0.2                           2396892.7500
+  Mapping 'naive_mm_DW01_add_36'
+    0:28:53  281158.2      1.08    1674.4       0.2                           2397611.7500
+    0:28:53  281134.7      1.02    1664.8       0.2                           2397382.7500
+  Mapping 'naive_mm_DW01_add_37'
+    0:28:53  281140.6      1.08    1674.4       0.2                           2397379.5000
+    0:28:53  281117.6      1.02    1664.8       0.2                           2397115.7500
+  Mapping 'naive_mm_DW01_add_38'
+    0:28:54  281140.6      1.08    1674.8       0.2                           2397379.5000
+    0:28:54  281117.6      1.02    1664.8       0.2                           2397115.7500
+  Mapping 'naive_mm_DW01_add_39'
+    0:28:54  281158.2      1.07    1672.0       0.2                           2397611.7500
+    0:28:54  281139.1      1.02    1664.8       0.2                           2397441.0000
+  Mapping 'naive_mm_DW01_add_40'
+    0:28:55  281117.1      1.11    1679.5       0.2                           2397109.7500
+    0:28:55  281108.5      1.05    1669.6       0.2                           2397017.7500
+  Mapping 'naive_mm_DW01_add_41'
+    0:28:55  281121.6      1.08    1673.8       0.2                           2397142.5000
+    0:28:55  281106.5      1.02    1665.4       0.2                           2396954.0000
+  Mapping 'naive_mm_DW01_add_42'
+    0:28:56  281158.2      1.07    1673.3       0.2                           2397611.7500
+    0:28:56  281143.5      1.02    1664.8       0.2                           2397445.7500
+  Mapping 'naive_mm_DW01_add_43'
+    0:28:56  281117.1      1.12    1680.9       0.2                           2397109.7500
+    0:28:57  281113.4      1.05    1669.0       0.2                           2397127.0000
+  Mapping 'naive_mm_DW01_add_44'
+    0:28:57  281096.8      1.07    1672.2       0.2                           2396856.5000
+    0:28:57  281087.5      1.03    1665.8       0.2                           2396758.2500
+  Mapping 'naive_mm_DW01_add_45'
+    0:28:58  281159.6      1.07    1673.2       0.2                           2397616.5000
+    0:28:58  281150.3      1.02    1664.8       0.2                           2397480.7500
+  Mapping 'naive_mm_DW01_add_46'
+    0:28:58  281140.6      1.07    1672.6       0.2                           2397379.5000
+    0:28:58  281117.6      1.02    1664.8       0.2                           2397115.7500
+  Mapping 'naive_mm_DW01_add_47'
+    0:28:59  281140.6      1.06    1671.7       0.2                           2397379.5000
+    0:28:59  281130.0      1.02    1664.8       0.2                           2397247.0000
+Information: Added key list 'DesignWare' to design 'naive_xm_6'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'naive_xm_5'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'naive_xm_4'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'naive_xm_3'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'naive_xm_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'naive_xm_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'naive_xm_0'. (DDB-72)
+    0:30:04  281812.1      0.80    1620.9       0.2                           2407382.0000
+    0:30:04  281812.1      0.80    1620.9       0.2                           2407382.0000
+    0:30:07  281843.5      0.80    1621.4       0.2                           2407793.2500
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:34:50  269722.8      0.89    1974.2       0.4                           2304134.2500
+    0:34:53  269693.3      0.89    1969.6       0.4                           2303712.2500
+    0:35:00  269621.5      0.89    1961.1       0.4                           2302221.2500
+    0:35:16  269536.8      0.89    1960.9       0.4                           2300198.5000
+    0:35:36  269514.7      0.88    1955.0       0.4                           2299452.7500
+    0:35:48  269375.7      0.88    1954.4       0.4                           2296504.0000
+    0:36:08  268711.5      0.88    1954.0       0.3                           2286769.0000
+    0:36:30  267805.3      0.88    1951.7       0.3                           2271258.2500
+    0:37:01  267238.3      0.88    1951.7       0.3                           2263011.5000
+    0:37:26  266746.9      0.88    1952.4       0.3                           2255714.5000
+    0:37:37  266593.5      0.88    1949.3       0.3                           2253640.0000
+    0:37:43  266456.1      0.88    1948.9       0.3                           2251306.0000
+    0:37:46  266393.9      0.88    1948.1       0.3                           2250492.5000
+    0:37:56  266095.0      0.88    1948.1       0.3                           2246382.5000
+    0:38:24  264783.1      0.83    1842.3       0.3                           2222651.5000
+
+  Beginning Delay Optimization HSVT Pass
+  --------------------------------------
+    0:38:51  264525.9      0.83    1842.3       0.3                           2218871.0000
+    0:38:52  264525.9      0.83    1842.3       0.3                           2218871.0000
+    0:38:52  264525.9      0.83    1842.3       0.3                           2218871.0000
+    0:39:33  268518.8      0.73    1657.0       0.1                           2502369.2500
+    0:39:52  268518.8      0.73    1657.0       0.1                           2502369.2500
+    0:39:52  268518.8      0.73    1657.0       0.1                           2502369.2500
+    0:39:52  268518.8      0.73    1657.0       0.1                           2502369.2500
+    0:40:13  269911.3      0.68    1617.2       0.1                           2868797.7500
+    0:41:35  270246.8      0.60    1487.7       0.1                           4806721.0000
+    0:42:11  270419.9      0.60    1371.7       0.1                           6163793.5000
+    0:44:01  268708.6      0.60    1337.2       0.2                           7518959.5000
+    0:44:02  268708.6      0.60    1337.2       0.2                           7518959.5000
+    0:52:02  282148.4      0.37     963.4       0.2                           19210760.0000
+    0:52:03  282148.4      0.37     963.4       0.2                           19210760.0000
+    0:56:39  285064.9      0.21     487.6       3.0                           30498924.0000
+    0:56:39  285064.9      0.21     487.6       3.0                           30498924.0000
+    1:10:28  299393.6      0.13     299.2       3.1                           41205616.0000
+    1:10:29  299393.6      0.13     299.2       3.1                           41205616.0000
+    1:20:19  301057.5      0.00       0.0       4.4                           51362292.0000
+    1:20:19  301057.5      0.00       0.0       4.4                           51362292.0000
+    1:20:19  301057.5      0.00       0.0       4.4                           51362292.0000
+
+  Beginning Delay Optimization
+  ----------------------------
+    1:20:19  301057.5      0.00       0.0       4.4                           51362292.0000
+    1:20:19  301057.5      0.00       0.0       4.4                           51362292.0000
+    1:20:19  301057.5      0.00       0.0       4.4                           51362292.0000
+    1:20:19  301057.5      0.00       0.0       4.4                           51362292.0000
+    1:20:19  301057.5      0.00       0.0       4.4                           51362292.0000
+    1:20:19  301057.5      0.00       0.0       4.4                           51362292.0000
+    1:20:20  301057.5      0.00       0.0       4.4                           51362292.0000
+    1:20:20  301057.5      0.00       0.0       4.4                           51362292.0000
+
+
+  Beginning Design Rule Fixing  (min_capacitance)  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    1:20:20  301057.5      0.00       0.0       4.4                           51362292.0000
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+    1:21:13  300888.0      0.00       0.0       0.3                           51221884.0000
+    1:21:13  300888.0      0.00       0.0       0.3                           51221884.0000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    1:21:13  300888.0      0.00       0.0       0.3                           51221884.0000
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+  Global Optimization (Phase 51)
+  Global Optimization (Phase 52)
+  Global Optimization (Phase 53)
+    1:25:36  285970.8      0.27     343.6       1.5                           37156768.0000
+    1:26:35  295020.8      0.06      82.2       1.3                           43723640.0000
+    1:36:29  304335.5      0.02      12.3       1.5                           49968952.0000
+    1:36:29  304335.5      0.02      12.3       1.5                           49968952.0000
+    1:40:27  281257.0      0.02       4.0       1.3                           31654318.0000
+    1:40:28  281257.0      0.02       4.0       1.3                           31654318.0000
+    1:43:55  284184.4      0.00       0.0       1.3                           33472920.0000
+    1:43:56  284184.4      0.00       0.0       1.3                           33472920.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:56  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:57  284183.3      0.00       0.0       1.3                           33475124.0000
+    1:43:57  284183.3      0.00       0.0       1.3                           33475124.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    1:44:14  284182.9      0.00       0.0       1.3                           33475124.0000
+    1:56:01  268776.6      0.00       0.0       0.8                           26927984.0000
+    1:56:04  268776.6      0.00       0.0       0.8                           26927984.0000
+    1:56:04  268776.6      0.00       0.0       0.8                           26927984.0000
+    1:59:24  268106.8      0.00       0.0       0.7                           23418156.0000
+
+  Beginning Delay Optimization HSVT Pass
+  --------------------------------------
+    1:59:43  268106.8      0.00       0.0       0.7                           23418156.0000
+    1:59:43  268106.8      0.00       0.0       0.7                           23418156.0000
+    1:59:43  268106.8      0.00       0.0       0.7                           23418156.0000
+    2:03:11  268110.2      0.00       0.0       0.7                           23416438.0000
+    2:03:30  268110.2      0.00       0.0       0.7                           23416438.0000
+    2:03:30  268110.2      0.00       0.0       0.7                           23416438.0000
+    2:03:30  268110.2      0.00       0.0       0.7                           23416438.0000
+    2:05:11  268110.2      0.00       0.0       0.7                           23416438.0000
+    2:05:34  268096.9      0.00       0.0       0.7                           23411412.0000
+    2:05:37  268071.5      0.00       0.0       0.7                           23407198.0000
+    2:05:48  268036.9      0.00       0.0       0.6                           23393810.0000
+    2:06:40  267759.4      0.00       0.0       0.6                           23308390.0000
+    2:06:50  267689.2      0.00       0.0       0.6                           23290474.0000
+    2:07:04  267596.3      0.00       0.0       0.6                           23151766.0000
+    2:07:13  267635.8      0.00       0.0       0.6                           23063600.0000
+    2:07:28  267688.0      0.00       0.0       0.6                           22963970.0000
+    2:08:16  267716.1      0.00       0.0       0.6                           22917212.0000
+    2:09:35  267724.1      0.00       0.0       0.6                           22897316.0000
+    2:11:12  267726.0      0.00       0.0       0.6                           22855644.0000
+    2:12:21  267760.9      0.00       0.0       0.6                           22766080.0000
+    2:12:49  267662.3      0.00       0.0       0.4 mm_U0/g_xm[3].xm_U/net314111 22594570.0000
+    2:13:03  267662.1      0.00       0.0       0.4 mm_U0/g_mul_a_b_pip[5].pip_U1/net317041 22594834.0000
+    2:13:07  267662.1      0.00       0.0       0.3                           22594762.0000
+    2:13:07  267662.1      0.00       0.0       0.3                           22594762.0000
+    2:13:09  267662.1      0.00       0.0       0.3                           22594762.0000
+    2:13:09  267662.1      0.00       0.0       0.3                           22594762.0000
+    2:26:18  263507.3      0.00       0.0       0.3                           21786480.0000
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db'
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db'
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'naive_mm_wrapper' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'mm_U0/g_xm[2].xm_U/clk': 10881 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#compile_ultra -retime -no_autoungroup
+#write_file -format ddc -hierarchy -output ./unmapped/$DESIGN_NAME.ddc
+#read_sdc ./scr/pkpu_top.sdc -echo
+#compile_ultra -retime -gate_clock
+dc_shell> report_timing
+Information: Updating design information... (UID-85)
+Warning: Design 'naive_mm_wrapper' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : naive_mm_wrapper
+Version: P-2019.03
+Date   : Fri Mar 29 12:59:24 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: a_reg_reg[7]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mm_U0/xm_U0/result_reg[184]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  naive_xm_5         ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  naive_xm_4         ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  naive_xm_3         ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  naive_xm_2         ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  naive_xm_1         ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  naive_xm_0         ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  pip_data_width288_stage7
+                     ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  pip_data_width288_stage6
+                     ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  pip_data_width288_stage5
+                     ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  pip_data_width288_stage4
+                     ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  pip_data_width288_stage3
+                     ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  pip_data_width288_stage2
+                     ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  pip_data_width288_stage1
+                     ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  naive_xm_6         ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  naive_xm_7         ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  naive_mm_wrapper   ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  naive_mm           ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_reg_reg[7]/CP (DFQOPTMAD8BWP12T30P140LVT)             0.00 #     0.00 r
+  a_reg_reg[7]/Q (DFQOPTMAD8BWP12T30P140LVT)              0.03       0.03 f
+  mm_U0/op1[7] (naive_mm)                                 0.00       0.03 f
+  mm_U0/U68724/ZN (INVD6BWP12T30P140LVT)                  0.01       0.04 r
+  mm_U0/U89617/ZN (INVD15BWP12T30P140LVT)                 0.03       0.07 f
+  mm_U0/U1739/ZN (XNR2D1BWP12T30P140HVT)                  0.06       0.13 r
+  mm_U0/U67965/ZN (OAI22D1BWP12T30P140)                   0.03       0.16 f
+  mm_U0/U91848/S (FA1D1BWP12T30P140HVT)                   0.10       0.26 r
+  mm_U0/U62659/ZN (INVD1BWP12T30P140)                     0.01       0.27 f
+  mm_U0/U30555/Z (CKXOR2D0BWP12T30P140LVT)                0.03       0.30 r
+  mm_U0/U1434/ZN (XNR2D1BWP12T30P140)                     0.03       0.34 f
+  mm_U0/U23951/CO (FA1OPTCD1BWP12T30P140LVT)              0.03       0.37 f
+  mm_U0/U89549/CO (FA1D1BWP12T30P140LVT)                  0.03       0.40 f
+  mm_U0/U85767/ZN (IND2D1BWP12T30P140HVT)                 0.03       0.43 f
+  mm_U0/U13743/ZN (IOA21D1BWP12T30P140)                   0.03       0.46 f
+  mm_U0/U28089/ZN (ND2D1BWP12T30P140HVT)                  0.02       0.48 r
+  mm_U0/U17603/ZN (OAI21D1BWP12T30P140HVT)                0.02       0.50 f
+  mm_U0/U70399/ZN (AOI21D1BWP12T30P140LVT)                0.02       0.52 r
+  mm_U0/U17224/ZN (OAI21OPTPBD1BWP12T30P140LVT)           0.02       0.54 f
+  mm_U0/U67529/ZN (AOI21OPTPBD1BWP12T30P140LVT)           0.02       0.55 r
+  mm_U0/U67528/ZN (OAI21OPTPBD2BWP12T30P140LVT)           0.01       0.57 f
+  mm_U0/U32382/Z (BUFFD4BWP12T30P140LVT)                  0.02       0.58 f
+  mm_U0/U12105/ZN (IND2D1BWP12T30P140)                    0.01       0.59 r
+  mm_U0/U71691/ZN (IND2D1BWP12T30P140LVT)                 0.01       0.60 f
+  mm_U0/U78444/ZN (AOI21D1BWP12T30P140)                   0.02       0.62 r
+  mm_U0/U15714/Z (XOR2D1BWP12T30P140)                     0.03       0.66 f
+  mm_U0/xm_U0/op2[133] (naive_xm_7)                       0.00       0.66 f
+  mm_U0/xm_U0/U1232/ZN (IOA21D1BWP12T30P140)              0.01       0.67 r
+  mm_U0/xm_U0/U2349/ZN (ND2OPTPAD1BWP12T30P140LVT)        0.01       0.68 f
+  mm_U0/xm_U0/U3527/CO (FA1D1BWP12T30P140LVT)             0.03       0.71 f
+  mm_U0/xm_U0/U5949/S (FA1D1BWP12T30P140LVT)              0.06       0.77 r
+  mm_U0/xm_U0/U2708/S (FA1D1BWP12T30P140LVT)              0.04       0.81 r
+  mm_U0/xm_U0/U3270/Z (OR2D1BWP12T30P140LVT)              0.01       0.82 r
+  mm_U0/xm_U0/U2631/ZN (CKND2D1BWP12T30P140LVT)           0.01       0.83 f
+  mm_U0/xm_U0/U88/ZN (NR2D1BWP12T30P140LVT)               0.02       0.85 r
+  mm_U0/xm_U0/U2155/ZN (ND2D2BWP12T30P140LVT)             0.01       0.86 f
+  mm_U0/xm_U0/U3844/ZN (NR2OPTPAD2BWP12T30P140)           0.01       0.88 r
+  mm_U0/xm_U0/U3841/ZN (AOI21OPTPBD2BWP12T30P140LVT)      0.01       0.89 f
+  mm_U0/xm_U0/U3870/ZN (OAI21OPTPBD2BWP12T30P140LVT)      0.01       0.90 r
+  mm_U0/xm_U0/U4144/Z (BUFFD4BWP12T30P140LVT)             0.02       0.92 r
+  mm_U0/xm_U0/U991/ZN (INVD9BWP12T30P140)                 0.01       0.93 f
+  mm_U0/xm_U0/U5558/ZN (NR2D1BWP12T30P140LVT)             0.01       0.94 r
+  mm_U0/xm_U0/U5472/ZN (NR2OPTPAD1BWP12T30P140)           0.01       0.95 f
+  mm_U0/xm_U0/U1349/Z (XOR2D1BWP12T30P140)                0.03       0.98 r
+  mm_U0/xm_U0/result_reg[184]/D (DFCNQD1BWP12T30P140)     0.00       0.98 r
+  data arrival time                                                  0.98
+
+  clock CLK (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  mm_U0/xm_U0/result_reg[184]/CP (DFCNQD1BWP12T30P140)
+                                                          0.00       1.00 r
+  library setup time                                     -0.02       0.98
+  data required time                                                 0.98
+  --------------------------------------------------------------------------
+  data required time                                                 0.98
+  data arrival time                                                 -0.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+dc_shell> report_area
+ 
+****************************************
+Report : area
+Design : naive_mm_wrapper
+Version: P-2019.03
+Date   : Fri Mar 29 13:00:53 2024
+****************************************
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs (File: /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db)
+    tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs (File: /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db)
+    tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs (File: /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db)
+
+Number of ports:                        12002
+Number of nets:                        244387
+Number of cells:                       200962
+Number of combinational cells:         189809
+Number of sequential cells:             10881
+Number of macros/black boxes:               0
+Number of buf/inv:                      21511
+Number of references:                      14
+
+Combinational area:             228103.004937
+Buf/Inv area:                     9914.183884
+Noncombinational area:           35403.983333
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                263506.988270
+Total area:                 undefined
+1
+dc_shell> 

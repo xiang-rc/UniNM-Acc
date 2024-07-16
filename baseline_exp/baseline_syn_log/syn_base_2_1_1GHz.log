@@ -1,0 +1,548 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version P-2019.03 for linux64 - Feb 27, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+source ./common_setup.tcl -verbose
+.
+. /tools/eda/synopsys/synthesis/P-2019.03/libraries/syn                             /tools/eda/synopsys/synthesis/P-2019.03/minpower/syn                              ~/work/S018DP_X136Y8D8_PR                            ~/work/SCC018UG_UHD_RVT/liberty/1.8v                            ~/work/SCC018UG_UHD_RVT/symbol       
+. /tools/eda/synopsys/synthesis/P-2019.03/libraries/syn                            /tools/eda/synopsys/synthesis/P-2019.03/syn_ver                            /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a                            /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b                            /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a                            /login_home/taoqichao/Desktop/MM_ASIC/src/                            /login_home/taoqichao/Desktop/MM_ASIC/src/top_poly_mul/ 
+tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db                                tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db                             tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db 
+tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs                          tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs                          tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs
+/tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/dw_foundation.sldb
+tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db                                tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db                             tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db  /tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/dw_foundation.sldb
+1
+true
+true
+comprehensive
+default_all
+*******************************************************************
+*********************end of load .common_dc.setup******************
+*******************************************************************
+source ./dont_use.tcl -verbose
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db'
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db'
+Loading db file '/tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/dw_foundation.sldb'
+set DESIGN_NAME mm_256x256_wrapper
+mm_256x256_wrapper
+remove_design -all
+Removing library 'tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs'
+Removing library 'tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs'
+Removing library 'tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs'
+Removing library 'dw_foundation.sldb'
+1
+set_svf $DESIGN_NAME.svf
+1
+analyze -vcs "-verilog -f ./src_file.lst"
+Running PRESTO HDLC
+Compiling source file ../src/mm_256x256_wrapper.v
+Compiling source file ../src/mm_256x256_iter.v
+Compiling source file ../src/mult_256x32_neg32.v
+Compiling source file ../src/mult_256x32.v
+Compiling source file ../src/mult_partial.v
+Compiling source file ../src/mult_256x48.v
+Compiling source file ../src/mult_256x64.v
+Compiling source file ../src/mult_256x80.v
+Compiling source file ../src/xm_32_f.v
+Compiling source file ../src/xm_48.v
+Compiling source file ../src/xm_64.v
+Compiling source file ../src/xm_80.v
+Presto compilation completed successfully.
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db'
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db'
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db'
+Loading db file '/tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/dw_foundation.sldb'
+1
+elaborate $DESIGN_NAME
+Loading db file '/tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/gtech.db'
+Loading db file '/tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/standard.sldb'
+  Loading link library 'tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs'
+  Loading link library 'tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs'
+  Loading link library 'tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+	in routine mm_256x256_wrapper line 19 in file
+		'../src/mm_256x256_wrapper.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      a_reg_reg      | Flip-flop |  256  |  Y  | Y  | N  | N  | N  | N  | N  |
+|      b_reg_reg      | Flip-flop |  256  |  Y  | Y  | N  | N  | N  | N  | N  |
+|        p_reg        | Flip-flop |  256  |  Y  | Y  | N  | N  | N  | N  | N  |
+|      sel_r_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     rst_n_r_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    preset_r_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (mm_256x256_wrapper)
+Elaborated 1 design.
+Current design is now 'mm_256x256_wrapper'.
+Information: Building the design 'mm_256x256_iter'. (HDL-193)
+
+statistics for FSM inference:
+
+  no finite state machine inferred.
+
+Inferred memory devices in process
+	in routine mm_256x256_iter line 26 in file
+		'../src/mm_256x256_iter.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       sr_reg        | Flip-flop |  256  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine mm_256x256_iter line 46 in file
+		'../src/mm_256x256_iter.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     shift_r_reg     | Flip-flop |  256  |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Synthetic Cells Summary
+===================================
+|        Cell Type        | Count |
+===================================
+| MULT_UNS_OP;256;16;272  |   1   |
+| ADD_UNS_OP;256;272;272  |   1   |
+|   SUB_UNS_OP;16;16;16   |   1   |
+|   ADD_UNS_OP;16;1;16    |   1   |
+| MULT_UNS_OP;16;255;271  |   1   |
+| ADD_UNS_OP;272;271;272  |   1   |
+| SELECT_OP_2.256_2.256_2 |   2   |
+===================================
+Presto compilation completed successfully. (mm_256x256_iter)
+1
+#-parameter DW=256
+current_design $DESIGN_NAME
+Current design is 'mm_256x256_wrapper'.
+{mm_256x256_wrapper}
+set_top_module $DESIGN_NAME
+Error: unknown command 'set_top_module' (CMD-005)
+if {[link] == 0} {
+    echo "link error!"
+    #exit
+}
+
+  Linking design 'mm_256x256_wrapper'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs (library) /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db
+  tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs (library) /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db
+  tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs (library) /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db
+  dw_foundation.sldb (library) /tools/eda/synopsys/synthesis/P-2019.03/libraries/syn/dw_foundation.sldb
+
+uniquify
+1
+if {[check_design] == 0} {
+    echo "check_design error!"
+    #exit
+}
+write_file -format ddc -hierarchy -output unmapped/$DESIGN_NAME.ddc
+Writing ddc file 'unmapped/mm_256x256_wrapper.ddc'.
+1
+create_clock -name CLK -period 1.0 -waveform {0.00 0.50} [get_ports clk]
+1
+set_ideal_network -no_propagate [get_ports clk]
+1
+set_ideal_network -no_propagate [get_ports rst_n]
+1
+#compile_ultra -retime -no_autoungroup
+compile_ultra -no_autoungroup
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 16 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | P-2019.03-DWBB_201903.0 |     *     |
+| Licensed DW Building Blocks        | P-2019.03-DWBB_201903.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+  Simplifying Design 'mm_256x256_wrapper'
+
+Loaded alib file './alib-52/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db.alib' (placeholder)
+Loaded alib file './alib-52/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db.alib'
+Loaded alib file './alib-52/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db.alib' (placeholder)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mm_256x256_wrapper'
+  Processing 'mm_256x256_iter'
+ Implement Synthetic for 'mm_256x256_iter'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELBWP12T30P140' in the library 'tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHBWP12T30P140' in the library 'tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIELBWP12T30P140HVT' in the library 'tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHBWP12T30P140HVT' in the library 'tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIELBWP12T30P140LVT' in the library 'tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHBWP12T30P140LVT' in the library 'tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:05:28   21523.7      0.95     185.8       0.1                           193826.3594
+    0:05:36   47921.7      1.21     237.3       0.1                           494973.4688
+    0:05:41   48234.8      0.92     192.1       0.1                           498701.5312
+Information: Added key list 'DesignWare' to design 'mm_256x256_iter'. (DDB-72)
+    0:05:43   48236.2      0.91     191.1       0.1                           498738.6562
+    0:05:43   48236.2      0.91     191.1       0.1                           498738.6562
+    0:05:45   48106.8      0.91     191.1       0.1                           497061.5938
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:07:04   45525.3      1.00     210.3       0.1                           461789.0000
+
+  Beginning Delay Optimization HSVT Pass
+  --------------------------------------
+    0:07:29   44892.6      0.95     197.4       0.1                           450019.5625
+    0:07:30   44892.6      0.95     197.4       0.1                           450019.5625
+    0:07:30   44892.6      0.95     197.4       0.1                           450019.5625
+    0:09:15   45590.3      0.77     157.6       0.1                           535094.3750
+    0:09:35   45590.3      0.77     157.6       0.1                           535094.3750
+    0:09:36   45590.3      0.77     157.6       0.1                           535094.3750
+    0:09:36   45590.3      0.77     157.6       0.1                           535094.3750
+    0:09:44   45828.4      0.54     107.7       0.1                           964898.5000
+    0:11:56   44535.5      0.16      31.9       0.1                           2485443.7500
+    0:13:22   43482.4      0.10      12.9       0.1                           2945017.5000
+    0:13:38   32979.4      0.09       9.7       0.1                           3167909.7500
+    0:13:38   32979.4      0.09       9.7       0.1                           3167909.7500
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+
+
+  Beginning Design Rule Fixing  (min_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:15:55   33220.5      0.00       0.0       0.1                           4358320.5000
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:15:56   33220.5      0.00       0.0       0.1                           4358320.5000
+    0:15:56   33220.5      0.00       0.0       0.1                           4358320.5000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:15:56   33220.5      0.00       0.0       0.1                           4358320.5000
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+    0:18:09   28233.7      0.00       0.0       0.2                           3878158.2500
+    0:18:09   28233.7      0.00       0.0       0.2                           3878158.2500
+    0:18:09   28233.7      0.00       0.0       0.2                           3878158.2500
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+    0:18:48   26992.7      0.00       0.0       0.2                           2316768.5000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:18:49   26992.2      0.00       0.0       0.2                           2316762.7500
+    0:19:43   22082.8      0.00       0.0       0.2                           2101692.0000
+    0:19:46   22082.8      0.00       0.0       0.2                           2101692.0000
+    0:19:46   22082.8      0.00       0.0       0.2                           2101692.0000
+    0:20:38   22125.6      0.00       0.0       0.2                           1957653.7500
+
+  Beginning Delay Optimization HSVT Pass
+  --------------------------------------
+    0:20:56   22125.6      0.00       0.0       0.2                           1957653.7500
+    0:20:56   22125.6      0.00       0.0       0.2                           1957653.7500
+    0:20:56   22125.6      0.00       0.0       0.2                           1957653.7500
+    0:20:56   22125.6      0.00       0.0       0.2                           1957653.7500
+    0:21:19   22125.6      0.00       0.0       0.2                           1957653.7500
+    0:21:19   22125.6      0.00       0.0       0.2                           1957653.7500
+    0:21:19   22125.6      0.00       0.0       0.2                           1957653.7500
+    0:21:19   22125.6      0.00       0.0       0.2                           1957653.7500
+    0:23:02   22082.1      0.00       0.0       0.2                           1871249.7500
+    0:23:08   22087.6      0.00       0.0       0.2                           1858903.1250
+    0:23:08   22087.6      0.00       0.0       0.2                           1858903.1250
+    0:23:09   22087.6      0.00       0.0       0.2                           1858903.1250
+    0:23:09   22087.6      0.00       0.0       0.2                           1858903.1250
+    0:25:09   21671.7      0.00       0.0       0.1                           1791372.8750
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db'
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db'
+Loading db file '/login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'mm_256x256_wrapper' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1283 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#write_file -format ddc -hierarchy -output ./unmapped/$DESIGN_NAME.ddc
+#read_sdc ./scr/pkpu_top.sdc -echo
+#compile_ultra -retime -gate_clock
+dc_shell> report_timing
+Information: Updating design information... (UID-85)
+Warning: Design 'mm_256x256_wrapper' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mm_256x256_wrapper
+Version: P-2019.03
+Date   : Fri Mar 29 14:00:07 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: b_reg_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mm_U0/shift_r_reg[239]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mm_256x256_wrapper ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+  mm_256x256_iter    ZeroWireload          tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  b_reg_reg[4]/CP (DFQD1BWP12T30P140HVT)                  0.00 #     0.00 r
+  b_reg_reg[4]/Q (DFQD1BWP12T30P140HVT)                   0.08       0.08 f
+  mm_U0/op2[4] (mm_256x256_iter)                          0.00       0.08 f
+  mm_U0/U4632/Z (BUFFD4BWP12T30P140LVT)                   0.02       0.10 f
+  mm_U0/U11728/ZN (XNR2OPTND2BWP12T30P140)                0.03       0.13 r
+  mm_U0/U11250/ZN (OAI22D2BWP12T30P140LVT)                0.02       0.14 f
+  mm_U0/U10700/ZN (AOI22D1BWP12T30P140LVT)                0.01       0.16 r
+  mm_U0/U2226/ZN (INVD1BWP12T30P140LVT)                   0.01       0.17 f
+  mm_U0/U2217/ZN (CKND2BWP12T30P140LVT)                   0.01       0.18 r
+  mm_U0/U10991/Z (XOR2OPTND2BWP12T30P140LVT)              0.02       0.20 f
+  mm_U0/U7751/Z (XOR2D2BWP12T30P140LVT)                   0.03       0.23 r
+  mm_U0/U10093/ZN (NR2D2BWP12T30P140LVT)                  0.01       0.23 f
+  mm_U0/U10987/ZN (IND2D1BWP12T30P140LVT)                 0.02       0.25 f
+  mm_U0/U7009/Z (XOR2D2BWP12T30P140LVT)                   0.04       0.29 r
+  mm_U0/U4416/ZN (INVD12BWP12T30P140LVT)                  0.02       0.31 f
+  mm_U0/U791/ZN (INVD12BWP12T30P140)                      0.02       0.33 r
+  mm_U0/U11284/S (FA1D1BWP12T30P140LVT)                   0.05       0.38 f
+  mm_U0/U11467/CO (FA1D1BWP12T30P140LVT)                  0.03       0.41 f
+  mm_U0/U10943/Z (OR2D0BWP12T30P140)                      0.02       0.43 f
+  mm_U0/U11463/ZN (IOA21D2BWP12T30P140LVT)                0.02       0.45 f
+  mm_U0/U11462/CO (FA1D1BWP12T30P140LVT)                  0.03       0.48 f
+  mm_U0/U11236/ZN (XNR2D1BWP12T30P140)                    0.03       0.52 r
+  mm_U0/U6715/ZN (XNR2D1BWP12T30P140)                     0.03       0.54 f
+  mm_U0/U1273/ZN (ND2D0BWP12T30P140)                      0.01       0.56 r
+  mm_U0/U4255/ZN (INVD1BWP12T30P140HVT)                   0.01       0.57 f
+  mm_U0/U11164/ZN (AOI21D1BWP12T30P140)                   0.02       0.59 r
+  mm_U0/U6575/ZN (OAI21OPTPBD1BWP12T30P140LVT)            0.02       0.61 f
+  mm_U0/U9590/ZN (INVD1BWP12T30P140HVT)                   0.01       0.62 r
+  mm_U0/U14801/ZN (OAI21D1BWP12T30P140HVT)                0.02       0.64 f
+  mm_U0/U6489/Z (AO21D1BWP12T30P140HVT)                   0.04       0.68 f
+  mm_U0/U6461/ZN (NR2D1BWP12T30P140)                      0.01       0.69 r
+  mm_U0/U5009/ZN (ND3D1BWP12T30P140LVT)                   0.02       0.71 f
+  mm_U0/U11059/ZN (XNR2D2BWP12T30P140LVT)                 0.03       0.74 r
+  mm_U0/U11576/S (FA1D4BWP12T30P140LVT)                   0.05       0.80 f
+  mm_U0/U6123/ZN (INR2D2BWP12T30P140LVT)                  0.01       0.81 r
+  mm_U0/U133/Z (OR2D1BWP12T30P140)                        0.02       0.83 r
+  mm_U0/U2442/ZN (NR2D1BWP12T30P140LVT)                   0.01       0.84 f
+  mm_U0/U2418/ZN (CKND2D3BWP12T30P140)                    0.01       0.85 r
+  mm_U0/U92/ZN (ND3D2BWP12T30P140LVT)                     0.02       0.87 f
+  mm_U0/U3099/ZN (INVD2BWP12T30P140)                      0.02       0.89 r
+  mm_U0/U1390/ZN (OAI21D0BWP12T30P140HVT)                 0.02       0.91 f
+  mm_U0/U3758/Z (AO21D1BWP12T30P140)                      0.03       0.94 f
+  mm_U0/U5845/ZN (NR3D1BWP12T30P140LVT)                   0.01       0.95 r
+  mm_U0/U5828/Z (CKXOR2D1BWP12T30P140LVT)                 0.02       0.97 r
+  mm_U0/shift_r_reg[239]/D (DFCNQD1BWP12T30P140HVT)       0.00       0.97 r
+  data arrival time                                                  0.97
+
+  clock CLK (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  mm_U0/shift_r_reg[239]/CP (DFCNQD1BWP12T30P140HVT)      0.00       1.00 r
+  library setup time                                     -0.03       0.97
+  data required time                                                 0.97
+  --------------------------------------------------------------------------
+  data required time                                                 0.97
+  data arrival time                                                 -0.97
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+dc_shell> report_area
+ 
+****************************************
+Report : area
+Design : mm_256x256_wrapper
+Version: P-2019.03
+Date   : Fri Mar 29 14:00:11 2024
+****************************************
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs (File: /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140hvt_180a/tcbn28hpcplusbwp12t30p140hvtssg0p81v125c_ccs.db)
+    tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs (File: /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140_180a/tcbn28hpcplusbwp12t30p140ssg0p81v125c_ccs.db)
+    tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs (File: /login_home/chenchen/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140lvt_180b/tcbn28hpcplusbwp12t30p140lvtssg0p81v125c_ccs.db)
+
+Number of ports:                         1544
+Number of nets:                         20601
+Number of cells:                        16662
+Number of combinational cells:          15378
+Number of sequential cells:              1283
+Number of macros/black boxes:               0
+Number of buf/inv:                       1979
+Number of references:                       7
+
+Combinational area:              18095.111744
+Buf/Inv area:                      866.879989
+Noncombinational area:            3576.551950
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 21671.663694
+Total area:                 undefined
+1
+dc_shell> 
